@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       - npx tsc
-  post-build:
+  post_build:
     commands:
       - zip -r function.zip ./dist ./node_modules
       - aws lambda update-function-code --function-name ts-lambda --zip-file fileb://function.zip
